@@ -8,9 +8,9 @@ class SongsController < ApplicationController
   end
 
   def create
-      @genre = Genre.new(genre_params(:name))
-      @genre.save
-      redirect_to genre_path(@genre)
+      @song = Song.new(song_params(:name))
+      @song.save
+      redirect_to song_path(@song)
     end
 
   def edit
